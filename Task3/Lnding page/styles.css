@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background:  #E5E9DE;
+}
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+ul{
+text-decoration: none;
+display: flex;
+flex-direction: row;
+gap: 20px;
+align-items: center;
+justify-content: center;
+}
+.top-5-picks{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+.elements{
+    border-radius: 10px;
+    background-color: #8BBFE2;
+}
+
+.box {
+  width: 20px;
+  height: 120px;
+  background: #255F4C;
+  color:#DFBF6B
+  
+}
+
+.insta {
+  background-color: #faf6f2;
+  padding: 80px 5vw;
+  text-align: center;
+}
+
+.insta h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: #b08c6a;
+  margin-bottom: 50px;
+}
+
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.insta-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+  background-color: #eaeaea;
+}
+
