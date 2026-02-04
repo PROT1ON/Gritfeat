@@ -27,7 +27,7 @@ body {
   z-index: -2;
 }
 
-.Login {
+.Signin {
     width: 360px;
     border-radius: 40px;
     background-color: #ECECEC;
@@ -118,6 +118,7 @@ input:focus {
     width: 100%;
     transition: 0.3s;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .primary-btn:hover {

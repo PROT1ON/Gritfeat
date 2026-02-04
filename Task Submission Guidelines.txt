@@ -1,0 +1,55 @@
+Task Submission Guidelines
+This document outlines the procedure and expectations for completing and submitting tasks during the internship. All interns must follow these instructions for their work.
+1. Repository Structure
+All tasks must be pushed to a single Git repository dedicated to this internship.
+The main (or master) branch should remain stable and clean.
+Each task must be implemented in a separate branch.
+Branch naming convention:
+task-01-description
+task-02-description
+Example:
+task-03-user-authentication
+2. Documentation (Mandatory)
+Every task must have its own README file inside the task branch(folder).
+The README must clearly explain:
+Problem statement
+Your approach & thought process
+Solution description
+Any other assumptions/solutions made (optional)
+3. Submission Process
+After completing a task:
+Push your branch to the remote repository.
+Share the following in the provided submission sheet:
+Repository link
+Branch name
+README/documentation link
+Short description of your solution
+Ensure links are accessible and correct before submitting.
+4. Use of AI Tools
+You are allowed to use AI tools only for assistance, such as:
+Understanding concepts
+Syntax reference
+Debugging hints
+You must not blindly copy and paste solutions from AI tools.
+The logic, structure, and implementation must be your own.
+You should be able to explain every line of code you submit.
+5. Code Quality
+Follow clean code practices:
+Meaningful variable and function names
+Proper indentation and formatting
+Avoid unnecessary complexity
+Apply suitable approaches and techniques
+Implement best case solutions using appropriate DSA.
+Optimize for:
+Readability
+Maintainability
+Performance (where applicable)
+6. General Guidelines
+Do not plagiarize code from:
+GitHub
+Blogs
+Other interns
+Late submissions may not be reviewed unless prior approval is given.
+Follow the given task requirements strictly.
+Ask questions early if requirements are unclear.
+Professional behavior and honesty are expected at all times.
