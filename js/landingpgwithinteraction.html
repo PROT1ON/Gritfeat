@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page with Interaction</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+             background: linear-gradient(135deg, #e8dff0, #d6e9f5);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+            gap: 20px;
+            background: rgba(255,255,255,0.6);
+            backdrop-filter: blur(14px);
+            border-radius: 20px;
+            margin: 20px;
+        }
+        
+        nav div {
+        background: transparent;
+        color: #111;
+        }
+
+        
+        nav div:hover {
+            background-color: #555;
+        }
+        
+        section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: 0.3s;
+        }
+        
+        .card:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .card p {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .card button {
+            background-color: #111;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .card h1 {
+        font-size: 56px;
+        font-weight: 800;
+        line-height: 1.1;
+        max-width: 700px;
+        text-align: center;
+        }
+
+        .card button:hover {
+            background-color: #444;
+        }
+        .end{
+            display: flex;
+            flex-direction: row;
+            
+        }
+        .dropbtn {
+        background-color: #FBF8FB;
+        color: #5A5859;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        border: gray;
+        cursor: pointer;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+        position: relative;
+        display: inline-block;
+        }
+        .login{
+            background-color: #FBF8FB;
+        color: #5A5859;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        border: none;
+        }
+        .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+section{
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+}
+
+.hero-img {
+  width: 420px;
+  opacity: 0.9;
+  mask-image: linear-gradient(to bottom, black 60%, transparent);
+}
+
+.right {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 16px;
+  display: flex;
+  gap: 25px;
+  justify-content: space-around;
+}
+.right button {
+  background: black;
+  color: white;
+  border-radius: 12px;
+  padding: 14px 22px;
+}
+.hero-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1600px;
+
+}
+#explore {
+    display: inline-block;
+    padding: 14px 28px;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+      background: white;
+  color: #111;
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  }
+
+  #modal {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 40px;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    width: 720px;
+    z-index: 1000;
+     background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(20px);
+  }
+
+  /* Grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .hair-card {
+    background: #fafafa;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .hair-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  }
+
+  .card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+  }
+
+  .card-content {
+    padding: 12px;
+  }
+
+  .card-content h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #111;
+  }
+
+  .card-content p {
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: #666;
+  }
+  #city-wrapper{
+    position: relative;
+    display: inline-block;
+    
+  }
+
+  #citymodal{
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index:5;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    min-width: 200px;
+    padding: 20px;
+  }
+  #city-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 12px;
+}
+    </style>
+</head>
+<body>
+
+    <nav>
+      <div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" 
+  class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <button class="openbtn" onclick="openNav()"><i class="fa-solid fa-house"></i></button>
+
+        <div class="end">
+            <div class="dropdown">
+        <button class="dropbtn">Find Stylist</button>
+        <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        </div>
+        </div>
+        <div class="login">
+            <button class="log-in">
+                Login
+            </button>
+        </div>
+        </div>
+    </nav>
+    
+    <section class="hero-wrapper">
+        <div class="card">
+            <h1>
+                Discover the Latest Hair Faashion Trends Near You
+            </h1>
+        </div>
+        
+        <div class="card">
+            <div class="mid">
+               <div id="explore">Explore Hair Trends</div>
+                <div id="modal">
+                <div class="grid" id="cardsContainer"></div>
+                </div>
+            <img
+      class="hero-img"
+      src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e"
+      alt="Model"
+    />
+    <p> Explore trending hairstyles, connect with experts and book your next transformation</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="right">
+                <div>
+                    <p class="footter">Search Hairstyle</p>
+                    
+                </div>
+                <div id="city-wrapper">
+                    <p id="city">Select Your City</p>
+                      <div id="citymodal">
+                      <div class="city-grid" id ="city-grid-container"></div>
+                      </div>
+                </div>
+                <div>
+                    <p class="footer">Choose Style or Service</p>
+                </div>
+                <button>Search Now</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+<script>
+    const explore = document.getElementById("explore");
+    const modal = document.getElementById("modal");
+    const container = document.getElementById("cardsContainer");
+    const items = [
+  {
+    title: "Classic Fade",
+    desc: "Clean sides with a smooth fade, perfect for a sharp everyday look.",
+    img: "https://images.unsplash.com/photo-1520975916090-3105956dac38"
+  },
+  {
+    title: "Textured Crop",
+    desc: "Short, messy texture on top for a modern and effortless style.",
+    img: "https://images.unsplash.com/photo-1621605810052-8095a3b7c2b1"
+  },
+  {
+    title: "Slick Back",
+    desc: "A polished, combed-back style that adds a bold, confident vibe.",
+    img: "https://images.unsplash.com/photo-1605497788044-5a32c7078486"
+  },
+  {
+    title: "Undercut",
+    desc: "Sharp contrast between long top and short sides for a trendy edge.",
+    img: "https://images.unsplash.com/photo-1519699047748-de8e457a634e"
+  },
+  {
+    title: "Pompadour",
+    desc: "High-volume top with faded sides for a timeless statement look.",
+    img: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6"
+  },
+  {
+    title: "Buzz Cut",
+    desc: "Ultra-short and low-maintenance style with a clean appearance.",
+    img: "https://images.unsplash.com/photo-1520975922203-b6b9c20a9a12"
+  },
+  {
+    title: "Curly Top Fade",
+    desc: "Natural curls on top combined with faded sides for a stylish finish.",
+    img: "https://images.unsplash.com/photo-1602810316498-ab67cf68c8e1"
+  },
+  {
+    title: "Middle Part",
+    desc: "Balanced, parted style for a relaxed and fashionable look.",
+    img: "https://images.unsplash.com/photo-1542060748-10c28b62716f"
+  },
+  {
+    title: "Long Layers",
+    desc: "Flowing layered hair for a bold and expressive personality.",
+    img: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e"
+  }
+];
+
+const cities=[
+  {
+    name:"Kathmandu"
+  },
+  {
+    name:"Lalitpur"
+  },
+  {
+    name:"Bhktapur"
+  },
+  {
+    name:"pokhar"
+  }
+]
+
+
+ container.innerHTML = items
+    .map(item => `
+      <div class="hair-card">
+        <img src="${item.img}" alt="${item.title}">
+        <div class="card-content">
+          <h4>${item.title}</h4>
+          <p>${item.desc}</p>
+        </div>
+      </div>
+    `)
+    .join("");
+
+  explore.addEventListener("mouseenter", () => {
+    modal.style.display = "block";
+  });
+
+  explore.addEventListener("mouseleave", () => {
+    setTimeout(() => {
+      if (!modal.matches(":hover")) {
+        modal.style.display = "none";
+      }
+    }, 100);
+  });
+
+  modal.addEventListener("mouseleave", () => {
+    modal.style.display = "none";
+  });
+
+  const citywrapper = document.getElementById("city-wrapper");
+  const citymodal = document.getElementById("citymodal");
+  const citygrid = document.getElementById("city-grid-container");
+
+  citygrid.innerHTML = cities.map(city =>
+    `<div class="hair-card">
+      <h4>${city.name}</h4>
+      </div>`
+  ).join("");
+
+  citywrapper.addEventListener("mouseenter", () => {
+  citymodal.style.display = "block";
+});
+
+citywrapper.addEventListener("mouseleave", () => {
+  citymodal.style.display = "none";
+});
+
+
+</script>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page with Interaction</title>
+    <link rel="stylesheet" href="style.css">
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+    <body>
+        <nav>
+            <div class="topnav">
+                <div class="st">
+                     <div class="logo-img">
+                    <img src="logo.jpg" class="logo"alt="logo" onclick="openNav()">
+                    </div>
+                      <div class="sidepanel" id="sidepanel">
+               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+        </div>
+                </div>
+            <div class="md">
+                  <a href="#home">Home</a>
+                <a href="#styles">Styles</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="end">
+                <input type="text" placeholder="Search here ...." class="search">
+                <div id="suggestion" class="suggestion"></div>
+                <span class="icon" id="themeIcon"><i class="fas fa-sun"></i></span>
+
+                <button class="log-in" >Login</button>
+            </div>
+        </div>
+                </nav>
+<section class="hero-section">
+    <div class="content">
+        <h1>
+            Discover The Future Of Innovation
+        </h1>
+        <p>
+            Explore our world class features and connect with experts globally
+        </p>
+    </div>
+    <div class="display-container">
+        <h1> Our Top Picks This Season</h1>
+          <div class="display">
+        <div class="display-img">
+            <img src ="1.jpg" alt="1">
+        </div>
+    </div>
+      <div class="display">
+        <div class="display-img">
+            <img src ="2.png" alt="2">
+        </div>
+    </div>
+      <div class="display">
+        <div class="display-img">
+            <img src ="3.jpg" alt="3">
+        </div>
+    </div>
+    <div class="display-last">
+<div id="explore">Explore New Ideas</div>
+
+<div id="modal">
+  <div class="grid" id="cardsContainer"></div>
+</div>
+    </div>
+    </div>
+</section>
+    <script src="script.js"></script>
+     </body>
+</html>

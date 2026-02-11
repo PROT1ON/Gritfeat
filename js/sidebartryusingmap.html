@@ -1,0 +1,9 @@
+<div id="menu"></div>
+<script>
+    const links = ["Home", "About", "Services", "Contact"];
+
+document.getElementById("menu").innerHTML = links
+  .map(link => `<a href="#">${link}</a>`)
+  .join("");
+
+</script>

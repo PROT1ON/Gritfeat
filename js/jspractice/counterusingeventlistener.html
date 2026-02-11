@@ -1,0 +1,26 @@
+<h2>Counter</h2>
+
+<p id="count" style="font-size:40px;">0</p>
+
+<button id="btnPlus">+</button>
+<button id="btnMinus">-</button>
+<button id="btnReset">Reset</button>
+<button id="btnSave">Save</button>
+<button id="btnLoad">Load</button>
+
+<script>
+    document.getElementById("btnPlus").addEventListener("click", increaseCount);
+
+    let count = 0;
+    loadCount();
+
+    function updateCount() {
+  document.getElementById("count").innerHTML = count;
+}
+
+function increaseCount() {
+  count++;
+  updateCount();
+}
+
+</script>
