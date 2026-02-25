@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="converter">
+        <h1>Currency Converter  </h1>
+        <input type="text" id="amount" placeholder="Enter amount in USD">
+        USD
+    <div class="result" id="result">
+        0 USD = 0 NPR
+          <h2 id="result-text">Result:RS 0 </h2>
+    </div>
+</div>
+<script>
+    const usdamt = document.getElementById('amount');
+    const convertRate = 147.3;
+    const result = document.getElementById('result');
+    const resultText = document.getElementById('result-text');
+
+    usdamt.addEventListener("input", () =>{
+        const amount = parseFloat(usdamt.value);
+        if(!isNaN(amount)) {
+            const npr = amount * convertRate;
+            result.textContent = `${amount} USD = ${npr} NPR`;
+            resultText.textContent = `Result: RS ${npr}`;
+        } else {
+            result.textContent = "0 USD = 0 NPR";   
+            resultText.textContent = `Result: RS 0`;
+        }
+    })
+</script>
